@@ -18,3 +18,5 @@ npm-debug.log
 /e2e/*.js
 /e2e/*.map
 
+# build
+/dist
