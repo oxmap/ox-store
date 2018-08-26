@@ -1,6 +1,6 @@
-<div class="navbar navbar-inverse bg-inverse">  
-    <a class="navbar-brand">SPORTS STORE</a>  
-</div>  
+<div class="navbar navbar-inverse bg-inverse">
+    <a class="navbar-brand">SPORTS STORE</a>
+</div>
 
 <div class="m-a-1">
     <h2 class="text-xs-center">Your Cart</h2>
@@ -21,18 +21,18 @@
             </tr>
             <tr *ngFor="let line of cart.lines">
                 <td>
-                    <input type="number" class="form-control-sm" 
-                           style="width:5em" 
+                    <input type="number" class="form-control-sm"
+                           style="width:5em"
                            [value]="line.quantity"
-                           (change)="cart.updateQuantity(line.product, 
+                           (change)="cart.updateQuantity(line.product,
                                 $event.target.value)"/>
                 </td>
                 <td>{{line.product.name}}</td>
                 <td class="text-xs-right">
-                    {{line.product.price | currency:"USD":true:"2.2-2"}}
+                    {{line.product.price | currency:'USD':'symbol':'2.2-2'}}
                 </td>
                 <td class="text-xs-right">
-                    {{(line.lineTotal) | currency:"USD":true:"2.2-2" }}
+                    {{(line.lineTotal) | currency:'USD':'symbol':'2.2-2' }}
                 </td>
                 <td class="text-xs-center">
                     <button class="btn btn-sm btn-danger"
@@ -46,7 +46,7 @@
             <tr>
                 <td colspan="3" class="text-xs-right">Total:</td>
                 <td class="text-xs-right">
-                    {{cart.cartPrice | currency:"USD":true:"2.2-2"}}
+                    {{cart.cartPrice | currency:'USD':'symbol':'2.2-2'}}
                 </td>
             </tr>
         </tfoot>
@@ -54,7 +54,7 @@
 </div>
 <div class="text-xs-center">
     <button class="btn btn-primary" routerLink="/store">Continue Shopping</button>
-    <button class="btn btn-secondary" routerLink="/checkout" 
+    <button class="btn btn-secondary" routerLink="/checkout"
             [disabled]="cart.lines.length == 0">
         Checkout
     </button>
