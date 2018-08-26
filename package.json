@@ -1,11 +1,12 @@
 {
   "name": "ox-store",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "license": "ISC",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
+    "build_prod": "ng build --target=production",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
