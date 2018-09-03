@@ -19,11 +19,11 @@ export class Cart {
   }
 
   updateQuantity(product: Product, quantity: number) {
-      let line = this.lines.find(line => line.product.id === product.id);
-      if (line !== undefined) {
-        line.quantity = Number(quantity);
-      }
-      this.recalculate();
+    const line = this.lines.find(line => line.product.id === product.id);
+    if (line !== undefined) {
+      line.quantity = Number(quantity);
+    }
+    this.recalculate();
   }
 
   removeLine(id: number) {
