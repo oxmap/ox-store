@@ -2,7 +2,6 @@ import { Injectable } from '@angular/core';
 import { Http, Request, RequestMethod } from '@angular/http';
 import { Observable } from 'rxjs/Observable';
 import { Product } from './product.model';
-import { Cart } from './cart.model';
 import { Order } from './order.model';
 import 'rxjs/add/operator/map';
 
